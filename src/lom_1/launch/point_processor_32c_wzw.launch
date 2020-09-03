@@ -1,0 +1,28 @@
+<launch>
+
+ <node pkg="lom_1" type="lom_1_processor_node_wzw" name="lom_1_point_processor_wzw" output="screen" >
+  <param name="sensor_type" type="int" value="320" />
+</node>
+
+ <param name="using_sharp_point" type="bool" value="true" />
+ <param name="using_flat_point" type="bool" value="true" />
+
+ <param name="using_last_sharp_point" type="bool" value="false"/>
+ <param name="using_last_flat_point" type="bool" value="false" />
+
+ <param name="using_local_map" type="bool" value="true" />
+
+ <param name="mapping_line_resolution" type="double" value="0.4"/>
+ <param name="mapping_plane_resolution" type="double" value="0.8"/>
+
+ <!--node pkg="lom_1" type="lom_1_laser_processor_node" name="lom_1_laser_processor" output="screen" /!-->
+ <node pkg="lom_1" type="lom_1_laser_odometry_node" name="lom_1_laser_odometry"/>
+
+ <!--node pkg="lom_1" type="lom_1_laser_odometry_test_node" name="lom_1_laser_odometry"/-->
+
+ <!--node pkg="lom_1" type="lom_1_laser_odometry_test_test_node" name="lom_1_laser_odometry"/-->
+
+ <!--node pkg="lom_1" type="lom_1_laser_mapping_node" name="lom_1_laser_mapping" output="screen" /!-->
+
+  <node pkg="lom_1" type="lom_1_laser_end_back_node" name="lom_1_laser_end_back" output="screen" />
+</launch>

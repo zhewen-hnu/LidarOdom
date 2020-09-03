@@ -1,0 +1,29 @@
+<launch>
+
+ <arg name="point_processor_file" default="$(find lom_1)/config/point_processor_livox.yaml" />
+ <node pkg="lom_1" type="lom_1_processor_node" name="lom_1_point_processor">
+   <rosparam command="load" file="$(arg point_processor_file)" />
+ </node>
+
+ <!--node pkg="lom_1" type="lom_1_laser_processor_node" name="lom_1_laser_processor" output="screen" /!-->
+
+ <param name="seprare_opt_" type="bool" value="true" />
+ <!--node pkg="lom_1" type="lom_1_odometry_node" name="lom_1_odometry" output="screen" /!-->
+ <!--node pkg="lom_1" type="lom_1_mapping_node" name="lom_1_mapping" output="screen" /!-->
+
+ <param name="together_opt" type="bool" value="false" />
+ <param name="using_sharp_point" type="bool" value="true" />
+ <param name="using_flat_point" type="bool" value="true" />
+ <param name="using_local_map" type="bool" value="true" />
+
+ <param name="using_last_sharp_point" type="bool" value="false" />
+
+ <param name="mapping_line_resolution" type="double" value="0.4"/>
+ <param name="mapping_plane_resolution" type="double" value="0.8"/>
+
+ <!--node pkg="lom_1" type="lom_1_laser_processor_node" name="lom_1_laser_processor" output="screen" /!-->
+ <node pkg="lom_1" type="lom_1_laser_odometry_node" name="lom_1_laser_odometry"/>
+ <!--node pkg="lom_1" type="lom_1_laser_mapping_node" name="lom_1_laser_mapping" output="screen" /!-->
+
+  <node pkg="lom_1" type="lom_1_laser_end_back_node" name="lom_1_laser_end_back" output="screen" />
+</launch>

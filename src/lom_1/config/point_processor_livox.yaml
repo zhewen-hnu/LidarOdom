@@ -1,0 +1,42 @@
+#laser information
+using_livox:     true
+sensor_type:    64         #70
+
+#laser using information
+using_lower_ring_num:    1
+using_upper_ring_num:    64
+
+#extration feature setting information
+num_scan_subregions:             1
+num_curvature_regions_corner:    1
+num_curvature_regions_flat:      5
+num_feature_regions:             3
+surf_curv_th:                    0.1
+sharp_curv_th:                   1
+max_corner_sharp:                7
+max_corner_less_sharp:           70
+max_surf_flat:                   4
+max_surf_normal:                 40
+max_sq_dis:                      100
+flat_extract_num:                100
+lower_ring_num_sharp_point:      1
+upper_ring_num_sharp_point:      100
+lower_ring_num_x_rot:            1
+upper_ring_num_x_rot:            50
+lower_ring_num_y_rot:            1
+upper_ring_num_y_rot:            50
+lower_ring_num_z_trans:          1
+upper_ring_num_z_trans:          50
+lower_ring_num_z_rot_xy_trans:   40
+upper_ring_num_z_rot_xy_trans:   90
+flat_extract_num_x_rot:          100
+flat_extract_num_y_rot:          100
+flat_extract_num_z_rot:          100
+flat_extract_num_x_trans:        100
+flat_extract_num_y_trans:        100
+flat_extract_num_z_trans:        100
+less_flat_filter_size:           0.2
+capture_frame_id:                /laser_init
+using_surf_point_normal:         true
+using_surf_point_2:              true
+extract_per_ring:                false

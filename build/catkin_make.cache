@@ -1,0 +1,2 @@
+lom_1
+-DCATKIN_DEVEL_PREFIX=/home/wzw/liom/devel -DCMAKE_INSTALL_PREFIX=/home/wzw/liom/install -G Unix Makefiles

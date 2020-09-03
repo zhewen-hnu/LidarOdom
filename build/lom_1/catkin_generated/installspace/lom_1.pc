@@ -1,0 +1,8 @@
+prefix=/home/wzw/liom/install
+
+Name: lom_1
+Description: Description of lom_1
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wzw/liom/install/lib 
+Requires: 
